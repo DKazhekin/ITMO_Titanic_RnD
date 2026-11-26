@@ -1,0 +1,35 @@
+{
+  "automated_tests": {
+    "command": "python -m pytest -q -W error",
+    "passed": 38,
+    "warnings": 0
+  },
+  "independent_checks": {
+    "all_12_prepared_features_retained": true,
+    "all_2000_paired_cluster_resamples_independently_recomputed": true,
+    "all_cv_means_and_population_std_recomputed": true,
+    "all_fits_converged": true,
+    "development_matches_outer_training": true,
+    "exactly_50_inner_model_fits": true,
+    "final_metrics_independently_recomputed": true,
+    "fixed_outer_fold_zero": true,
+    "full_repeat_preserved_all_22_snapshot_files_byte_for_byte": true,
+    "majority_uses_only_development_labels": true,
+    "no_target_id_or_group_features": true,
+    "plot_only_run_preserved_all_models_predictions_and_raw_files": true,
+    "prediction_ids_match_test": true,
+    "saved_categories_and_modes_match_only_development_rows": true,
+    "saved_numeric_statistics_match_only_development_rows": true,
+    "selected_by_unweighted_internal_mean": true,
+    "ticket_groups_disjoint": true
+  },
+  "other_platforms_tested": false,
+  "plot_checks": {
+    "all_three_pngs_visually_inspected": true,
+    "confusion_images_match_saved_counts": true,
+    "each_true_class_histogram_area_is_one": true,
+    "fixed_threshold_marked_at_half": true,
+    "validation_log_axis_means_and_std_bands_match_saved_scores": true
+  },
+  "verified_platform": "macOS arm64"
+}

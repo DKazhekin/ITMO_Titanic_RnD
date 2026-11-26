@@ -1,0 +1,156 @@
+{
+  "source": {
+    "original_url": "https://www.kaggle.com/competitions/titanic",
+    "mirror_url": "https://github.com/ageron/data",
+    "revision": "1e7693bc5a2f73e657cdf665f503fc71b629972e"
+  },
+  "archive": {
+    "url": "https://raw.githubusercontent.com/ageron/data/1e7693bc5a2f73e657cdf665f503fc71b629972e/titanic.tgz",
+    "sha256": "2cf3e0d11fb9f7f1b7601277f7922fcc9765ba9213c8c63e71bc578a04012350"
+  },
+  "files": {
+    "train.csv": {
+      "sha256": "14769fb1850e2d26d8e6db0ee49c213878040432827e39b13caaa15603c6598f",
+      "rows": 891,
+      "unique_passenger_ids": 891,
+      "duplicate_rows_without_id": 0,
+      "columns": {
+        "PassengerId": {
+          "dtype": "Int64",
+          "missing": 0,
+          "unique_nonmissing": 891
+        },
+        "Survived": {
+          "dtype": "Int64",
+          "missing": 0,
+          "unique_nonmissing": 2
+        },
+        "Pclass": {
+          "dtype": "Int64",
+          "missing": 0,
+          "unique_nonmissing": 3
+        },
+        "Name": {
+          "dtype": "string",
+          "missing": 0,
+          "unique_nonmissing": 891
+        },
+        "Sex": {
+          "dtype": "string",
+          "missing": 0,
+          "unique_nonmissing": 2
+        },
+        "Age": {
+          "dtype": "Float64",
+          "missing": 177,
+          "unique_nonmissing": 88
+        },
+        "SibSp": {
+          "dtype": "Int64",
+          "missing": 0,
+          "unique_nonmissing": 7
+        },
+        "Parch": {
+          "dtype": "Int64",
+          "missing": 0,
+          "unique_nonmissing": 7
+        },
+        "Ticket": {
+          "dtype": "string",
+          "missing": 0,
+          "unique_nonmissing": 681
+        },
+        "Fare": {
+          "dtype": "Float64",
+          "missing": 0,
+          "unique_nonmissing": 248
+        },
+        "Cabin": {
+          "dtype": "string",
+          "missing": 687,
+          "unique_nonmissing": 147
+        },
+        "Embarked": {
+          "dtype": "string",
+          "missing": 2,
+          "unique_nonmissing": 3
+        }
+      },
+      "target_counts": {
+        "0": 549,
+        "1": 342
+      }
+    },
+    "test.csv": {
+      "sha256": "d88facfbcf53fe855b1c15290521aee9c61b3a6283631fa953983a95bacf1399",
+      "rows": 418,
+      "unique_passenger_ids": 418,
+      "duplicate_rows_without_id": 0,
+      "columns": {
+        "PassengerId": {
+          "dtype": "Int64",
+          "missing": 0,
+          "unique_nonmissing": 418
+        },
+        "Pclass": {
+          "dtype": "Int64",
+          "missing": 0,
+          "unique_nonmissing": 3
+        },
+        "Name": {
+          "dtype": "string",
+          "missing": 0,
+          "unique_nonmissing": 418
+        },
+        "Sex": {
+          "dtype": "string",
+          "missing": 0,
+          "unique_nonmissing": 2
+        },
+        "Age": {
+          "dtype": "Float64",
+          "missing": 86,
+          "unique_nonmissing": 79
+        },
+        "SibSp": {
+          "dtype": "Int64",
+          "missing": 0,
+          "unique_nonmissing": 7
+        },
+        "Parch": {
+          "dtype": "Int64",
+          "missing": 0,
+          "unique_nonmissing": 8
+        },
+        "Ticket": {
+          "dtype": "string",
+          "missing": 0,
+          "unique_nonmissing": 363
+        },
+        "Fare": {
+          "dtype": "Float64",
+          "missing": 1,
+          "unique_nonmissing": 169
+        },
+        "Cabin": {
+          "dtype": "string",
+          "missing": 327,
+          "unique_nonmissing": 76
+        },
+        "Embarked": {
+          "dtype": "string",
+          "missing": 0,
+          "unique_nonmissing": 3
+        }
+      }
+    }
+  },
+  "record_checks": {
+    "overlapping_passenger_ids": 0,
+    "train_repeated_ticket_groups": 134,
+    "train_passengers_with_repeated_ticket": 344,
+    "ticket_values_shared_between_source_files": 115,
+    "train_passengers_with_ticket_in_test": 207,
+    "test_passengers_with_ticket_in_train": 152
+  }
+}

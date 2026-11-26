@@ -1,0 +1,103 @@
+{
+  "development": {
+    "class_0": 439,
+    "class_1": 273,
+    "passengers": 712,
+    "survival_fraction": 0.38342696629213485,
+    "ticket_groups": 545
+  },
+  "inner_folds": [
+    {
+      "fold": 0,
+      "train": {
+        "class_0": 350,
+        "class_1": 218,
+        "passengers": 568,
+        "survival_fraction": 0.38380281690140844,
+        "ticket_groups": 435
+      },
+      "validation": {
+        "class_0": 89,
+        "class_1": 55,
+        "passengers": 144,
+        "survival_fraction": 0.3819444444444444,
+        "ticket_groups": 110
+      }
+    },
+    {
+      "fold": 1,
+      "train": {
+        "class_0": 351,
+        "class_1": 219,
+        "passengers": 570,
+        "survival_fraction": 0.38421052631578945,
+        "ticket_groups": 433
+      },
+      "validation": {
+        "class_0": 88,
+        "class_1": 54,
+        "passengers": 142,
+        "survival_fraction": 0.38028169014084506,
+        "ticket_groups": 112
+      }
+    },
+    {
+      "fold": 2,
+      "train": {
+        "class_0": 351,
+        "class_1": 218,
+        "passengers": 569,
+        "survival_fraction": 0.38312829525483305,
+        "ticket_groups": 436
+      },
+      "validation": {
+        "class_0": 88,
+        "class_1": 55,
+        "passengers": 143,
+        "survival_fraction": 0.38461538461538464,
+        "ticket_groups": 109
+      }
+    },
+    {
+      "fold": 3,
+      "train": {
+        "class_0": 352,
+        "class_1": 218,
+        "passengers": 570,
+        "survival_fraction": 0.3824561403508772,
+        "ticket_groups": 436
+      },
+      "validation": {
+        "class_0": 87,
+        "class_1": 55,
+        "passengers": 142,
+        "survival_fraction": 0.3873239436619718,
+        "ticket_groups": 109
+      }
+    },
+    {
+      "fold": 4,
+      "train": {
+        "class_0": 352,
+        "class_1": 219,
+        "passengers": 571,
+        "survival_fraction": 0.38353765323992994,
+        "ticket_groups": 440
+      },
+      "validation": {
+        "class_0": 87,
+        "class_1": 54,
+        "passengers": 141,
+        "survival_fraction": 0.3829787234042553,
+        "ticket_groups": 105
+      }
+    }
+  ],
+  "test": {
+    "class_0": 110,
+    "class_1": 69,
+    "passengers": 179,
+    "survival_fraction": 0.3854748603351955,
+    "ticket_groups": 136
+  }
+}

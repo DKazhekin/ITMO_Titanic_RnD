@@ -1,0 +1,76 @@
+{
+  "config": {
+    "bootstrap": {
+      "confidence_level": 0.95,
+      "n_resamples": 2000
+    },
+    "features": {
+      "categorical": [
+        "Sex",
+        "Pclass",
+        "Embarked"
+      ],
+      "numeric": [
+        "Age",
+        "Fare",
+        "SibSp",
+        "Parch"
+      ]
+    },
+    "model": {
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "max_iter": 1000,
+      "solver": "lbfgs",
+      "tol": 0.0001
+    },
+    "prediction": {
+      "threshold": 0.5
+    },
+    "search": {
+      "C": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "class_weight": [
+        null,
+        "balanced"
+      ]
+    },
+    "seed": 42,
+    "validation": {
+      "inner_splits": 5,
+      "outer_splits": 5,
+      "test_fold": 0
+    }
+  },
+  "config_sha256": "2621bb7f212474242d30f8b1a5dda95babe9911f7b441a2372fb1530f262a45e",
+  "data_config_sha256": "de042e8d7c62d115d2cd65e9331bf3e41554d042a3e4b6e5d6bdd6f13e904a95",
+  "data_sha256": "14769fb1850e2d26d8e6db0ee49c213878040432827e39b13caaa15603c6598f",
+  "files": {
+    "control.joblib": "b2e2d4af7f3219d6f73f8bd596a025833a97c182eb8e21d2109779064d0ae9d9",
+    "model.joblib": "ab818bde7890d2986b30dc7698f41c75223ec92491055955ac3b7980106af1c5",
+    "splits.json": "308670d422de2e3ac8f1e51d764c3f8f87fdd4392f2a2e7fb92596ee12ec48e2",
+    "training.json": "b854e92f337f5fdb991712f5590e3825d3ff8bcdd7405679b09b7a1059afd03b"
+  },
+  "lock_sha256": "9b7e26d48a79098f65ef855808e2de378c2562f414ce3fb46e6c5340f0b47e1c",
+  "run_id": "39502fb75c3d84ef489b5c5be2f5936250e7925fe8f0e000b4e45d9caf552e86",
+  "training_source_sha256": {
+    "data.py": "029751119c8998dc1bfe8d653f8d931eec53e4e810d2f2737fdadf988b58ef31",
+    "experiment.py": "aba766403b5c5284bfa6af799df63b710ab386312dfa81551d09a74509cffa54",
+    "metrics.py": "3b3e572341fa000b53663c7c4769baad91e3ae9993bc7c276d73aa9e88d0d22f",
+    "train.py": "6b8bad406cef924b5574593aefec42fdc556f81b76c01ba790380349d04ef389"
+  },
+  "versions": {
+    "PyYAML": "6.0.3",
+    "joblib": "1.6.0",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "python": "3.14.10",
+    "scikit-learn": "1.9.1"
+  }
+}

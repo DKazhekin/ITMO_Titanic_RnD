@@ -1,0 +1,4 @@
+case,PassengerId,Age,Fare,SibSp,Parch,Sex,Pclass,Embarked,Survived,prediction_model,probability_model
+missed_survivor,339,45,8.0500000000000007,0,0,male,3,S,1,0,0.066451450721988201
+false_survival,42,27,21,1,0,female,2,S,0,1,0.77811196267374505
+missing_age,302,,23.25,2,0,male,3,Q,1,0,0.093442725915914945

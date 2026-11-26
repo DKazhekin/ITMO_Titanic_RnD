@@ -1,0 +1,16 @@
+source:
+  original_url: https://www.kaggle.com/competitions/titanic
+  mirror_url: https://github.com/ageron/data
+  revision: 1e7693bc5a2f73e657cdf665f503fc71b629972e
+archive:
+  url: https://raw.githubusercontent.com/ageron/data/1e7693bc5a2f73e657cdf665f503fc71b629972e/titanic.tgz
+  sha256: 2cf3e0d11fb9f7f1b7601277f7922fcc9765ba9213c8c63e71bc578a04012350
+files:
+  train.csv:
+    member: titanic/train.csv
+    sha256: 14769fb1850e2d26d8e6db0ee49c213878040432827e39b13caaa15603c6598f
+    rows: 891
+  test.csv:
+    member: titanic/test.csv
+    sha256: d88facfbcf53fe855b1c15290521aee9c61b3a6283631fa953983a95bacf1399
+    rows: 418
