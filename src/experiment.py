@@ -18,6 +18,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 import yaml
 
 from src.data import PROJECT_ROOT, load_config, read_table, verify_checksum, write_atomic
+from src.features import AgeMaleInteraction
 
 
 NUMERIC = ["Age", "Fare", "SibSp", "Parch"]
@@ -92,7 +93,8 @@ def feature_frame(frame: pd.DataFrame) -> pd.DataFrame:
     return features
 
 
-def build_pipeline(config: dict, c: float, class_weight: str | None) -> Pipeline:
+def build_pipeline(config: dict, c: float, class_weight: str | None, *,
+                   interaction: bool = False) -> Pipeline:
     numeric = Pipeline([
         ("impute", SimpleImputer(strategy="median")),
         ("scale", StandardScaler()),
@@ -101,11 +103,16 @@ def build_pipeline(config: dict, c: float, class_weight: str | None) -> Pipeline
         ("impute", SimpleImputer(strategy="most_frequent")),
         ("encode", OneHotEncoder(drop=None, handle_unknown="ignore", sparse_output=False)),
     ])
+    transformers = [
+        ("numeric", numeric, NUMERIC),
+        ("categorical", categorical, CATEGORICAL),
+    ]
+    if interaction:
+        transformers.append(("age_male", Pipeline([
+            ("interact", AgeMaleInteraction()), ("scale", StandardScaler()),
+        ]), ["Age", "Sex"]))
     return Pipeline([
-        ("prepare", ColumnTransformer([
-            ("numeric", numeric, NUMERIC),
-            ("categorical", categorical, CATEGORICAL),
-        ], remainder="drop")),
+        ("prepare", ColumnTransformer(transformers, remainder="drop")),
         ("model", LogisticRegression(C=c, class_weight=class_weight, **config["model"])),
     ])
 

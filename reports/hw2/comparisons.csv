@@ -1,0 +1,4 @@
+comparison,purpose,method,confidence_level,n_resamples,n_groups,seed,invalid_resamples,delta_balanced_accuracy,lower,upper
+full_minus_baseline,joint_effect,paired_ticket_group_percentile,0.94999999999999996,2000,136,42,0,0.0090909090909090384,-0.014423076923076872,0.031746031746031633
+full_minus_interaction,threshold_ablation,paired_ticket_group_percentile,0.94999999999999996,2000,136,42,0,0.0090909090909090384,0,0.022732485404503705
+full_minus_threshold,interaction_ablation,paired_ticket_group_percentile,0.94999999999999996,2000,136,42,0,0.0090909090909090384,-0.014423076923076872,0.031746031746031633

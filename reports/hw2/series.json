@@ -1,0 +1,115 @@
+{
+  "config": {
+    "bootstrap": {
+      "confidence_level": 0.95,
+      "n_resamples": 2000
+    },
+    "features": {
+      "categorical": [
+        "Sex",
+        "Pclass",
+        "Embarked"
+      ],
+      "numeric": [
+        "Age",
+        "Fare",
+        "SibSp",
+        "Parch"
+      ]
+    },
+    "model": {
+      "fit_intercept": true,
+      "l1_ratio": 0.0,
+      "max_iter": 1000,
+      "solver": "lbfgs",
+      "tol": 0.0001
+    },
+    "prediction": {
+      "threshold": 0.5
+    },
+    "search": {
+      "C": [
+        1.0
+      ],
+      "class_weight": [
+        null
+      ]
+    },
+    "seed": 42,
+    "threshold_search": {
+      "candidates": "unique_validation_probabilities_plus_0_0.5_1",
+      "comparison": "strict_greater",
+      "objective": "unweighted_mean_fold_balanced_accuracy",
+      "ties": "closest_to_0.5_then_lower"
+    },
+    "tracking": {
+      "directory": "artifacts/mlflow",
+      "experiment": "titanic-hw2"
+    },
+    "validation": {
+      "inner_splits": 5,
+      "outer_splits": 5,
+      "test_fold": 0
+    },
+    "variants": [
+      {
+        "hypothesis": "Reproduce the original logistic regression with its selected settings.",
+        "id": "baseline",
+        "interaction": false,
+        "tune_threshold": false
+      },
+      {
+        "hypothesis": "Different age slopes for male and female passengers may improve balanced accuracy.",
+        "id": "interaction",
+        "interaction": true,
+        "tune_threshold": false
+      },
+      {
+        "hypothesis": "A common validation-selected threshold may improve the balance of class recalls.",
+        "id": "threshold",
+        "interaction": false,
+        "tune_threshold": true
+      },
+      {
+        "hypothesis": "Combine age-by-sex interaction with a threshold selected for that feature set.",
+        "id": "full",
+        "interaction": true,
+        "tune_threshold": true
+      }
+    ]
+  },
+  "data_sha256": "14769fb1850e2d26d8e6db0ee49c213878040432827e39b13caaa15603c6598f",
+  "lock_sha256": "48fecbc6b79188b9adf18ae5c28dda7e29b4d9a09cdd49e8f237b0a3f8358c28",
+  "mlflow_runs": {
+    "baseline": "ce7440b2dd9f45c69d483967d0ee50fd",
+    "full": "e8baed12e2cc46b497c9bb06cfaa484f",
+    "interaction": "32f856a997a7427bb2ceb8c8235b9126",
+    "threshold": "14b22001c510448d997209d6853ccc31"
+  },
+  "series_id": "20261125T205316Z-19541605",
+  "source_sha256": {
+    "__init__.py": "317d621f8482e76a0646c4850dbcfaaf78f4e8c31e4d3fd3a9e8f96205353f95",
+    "data.py": "029751119c8998dc1bfe8d653f8d931eec53e4e810d2f2737fdadf988b58ef31",
+    "evaluate.py": "92df743c9384641c4896c4c191cf289733fee6b2eb7d25848b565a8975eecf9a",
+    "experiment.py": "a184a8ffbc492aa44c30799df2c73c16444d4411d943715467b5bb65b2db89d7",
+    "features.py": "40ac4a8935e9ff2f284b760fe5a7ede7fe92b5e0ea8f0dc7425b3bbe761d85f1",
+    "hw2.py": "908ed1c8b8c79432ca27c5666bd93d8958e33c6ea7c2fffba4895ca49a06cc76",
+    "hw2_report.py": "632c4d29fa6a8e33af64814de8c6904849e81e02ca677c1f967970c9d2c39520",
+    "hw2_verify.py": "c91db3a79c656701c9247697c357fa0cf0dc3faaf83fb69581aef251d97185dd",
+    "metrics.py": "3b3e572341fa000b53663c7c4769baad91e3ae9993bc7c276d73aa9e88d0d22f",
+    "plots.py": "0953b47c12b425da26e575438054e16ad5ffba7561906d1b61414c9f40cf67f6",
+    "thresholds.py": "a56f569674976a801e9297cf5b4f274490d1ec8203dfdafb1e20b8ef2cdec682",
+    "tracking.py": "5ee6c1787b0822100960aa39213f910f29fdcc96f859c5ab85fd2509b99cbcda",
+    "train.py": "6b8bad406cef924b5574593aefec42fdc556f81b76c01ba790380349d04ef389"
+  },
+  "versions": {
+    "PyYAML": "6.0.3",
+    "joblib": "1.6.0",
+    "matplotlib": "3.11.2",
+    "mlflow": "3.18.0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "python": "3.14.10",
+    "scikit-learn": "1.9.1"
+  }
+}
